@@ -1,0 +1,8 @@
+<h1>글 수정페이지입니다!</h1>
+<br>
+<form action='/home/update/<%=@post.id%>' method='post'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    제목 : <input type='text' name='post_title' value='<%=@post.title%>'><br><br>
+    내용 : <textarea name='post_content'><%=@post.content%></textarea>
+    <input type='submit' value='제출'>
+</form>
